@@ -5,13 +5,19 @@
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
-    "test": "nx test"
+    "test": "nx test",
+    "api": "yarn nx run api:serve --skip-nx-cache",
+    "cron": "yarn nx run cron:serve --skip-nx-cache"
   },
   "private": true,
   "dependencies": {
     "@nestjs/common": "^9.0.0",
     "@nestjs/core": "^9.0.0",
     "@nestjs/platform-express": "^9.0.0",
+    "alchemy-sdk": "^2.0.3",
+    "dayjs": "^1.11.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.0.0",
     "tslib": "^2.3.0"
@@ -21,11 +27,13 @@
     "@nestjs/testing": "^9.0.0",
     "@nrwl/cli": "14.6.1",
     "@nrwl/eslint-plugin-nx": "14.6.1",
+    "@nrwl/express": "^14.6.1",
     "@nrwl/jest": "14.6.1",
     "@nrwl/linter": "14.6.1",
     "@nrwl/nest": "14.6.1",
     "@nrwl/node": "14.6.1",
     "@nrwl/workspace": "14.6.1",
+    "@types/express": "4.17.13",
     "@types/jest": "28.1.1",
     "@types/node": "16.11.7",
     "@typescript-eslint/eslint-plugin": "~5.33.1",
