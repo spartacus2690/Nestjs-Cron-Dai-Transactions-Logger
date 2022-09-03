@@ -1,18 +1,20 @@
 version: '3.5'
 services:
-  mysql:
-    image: mysql:8
-    restart: always
+  postgres:
+    build:
+      context: ../..
+      dockerfile: ./development/docker/dev.db.Dockerfile
     environment:
-      MYSQL_DATABASE: 'db'
-      MYSQL_USER: 'user'
-      MYSQL_PASSWORD: 'password'
-      MYSQL_ROOT_PASSWORD: 'password'
+      POSTGRES_DB: 'db'
+      POSTGRES_USER: 'user'
+      POSTGRES_PASSWORD: 'password'
     ports:
-      - 3306:3306
+      - 5432:5432
     logging:
       driver: none
   redis:
     image: redis
+    command: >
+      --requirepass password
     ports:
       - 6379:6379
