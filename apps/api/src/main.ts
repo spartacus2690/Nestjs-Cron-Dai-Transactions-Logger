@@ -5,6 +5,7 @@ import { NestFactory } from '@nestjs/core';
 import { json } from 'body-parser';
 
 import { AppModule } from './app/app.module';
+import { ApiLogInterceptor } from './app/interceptors';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);

@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
-  "npmScope": "tessera",
+  "npmScope": "dai-cron-api",
   "affected": {
     "defaultBase": "main"
   },

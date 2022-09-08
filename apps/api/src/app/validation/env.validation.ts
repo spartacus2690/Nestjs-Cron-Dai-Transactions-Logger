@@ -21,6 +21,8 @@ class TestEnvironmentVariables {
   @IsString()
   DB_PORT: string;
   @IsString()
+  ALCHEMY_API_KEY: string;
+  @IsString()
   @IsOptional()
   REDIS_HOST?: string;
   @IsString()
@@ -29,6 +31,12 @@ class TestEnvironmentVariables {
   @IsString()
   @IsOptional()
   REDIS_PASSWORD?: string;
+  @IsString()
+  @IsOptional()
+  THROTTLE_LIMIT?: string;
+  @IsString()
+  @IsOptional()
+  THROTTLE_TTL?: string;
 }
 
 export function validateEnv(config: Record<string, unknown>) {

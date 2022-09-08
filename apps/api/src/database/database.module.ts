@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { Model } from 'objection';
-import { models, createPool } from '@tessera/shared';
+import { models, createPool } from '@dai-cron-api/shared';
 
 const pool = createPool();
 

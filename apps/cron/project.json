@@ -42,7 +42,8 @@
       "outputs": ["coverage/apps/cron"],
       "options": {
         "jestConfig": "apps/cron/jest.config.ts",
-        "passWithNoTests": true
+        "passWithNoTests": true,
+        "runInBand": true
       }
     }
   },

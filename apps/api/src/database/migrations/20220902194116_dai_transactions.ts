@@ -6,8 +6,8 @@ export async function up(knex: Knex): Promise<void> {
     table.string('from').notNullable();
     table.string('to').notNullable();
     table.string('value').notNullable();
-    table.integer('blockNum').notNullable();
-    table.timestamp('blockTimestamp').notNullable();
+    table.integer('block_num').notNullable();
+    table.timestamp('block_timestamp').notNullable();
   });
 }
 
